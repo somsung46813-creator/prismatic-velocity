@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Prismatic Velocity — Extreme-G Inspired Simulation</title>
+  <style>
+    html,body{margin:0;height:100%;overflow:hidden;background:#02030a;font-family:Inter,system-ui,sans-serif}
+    #hud{position:fixed;inset:0;pointer-events:none;color:#dff7ff;text-shadow:0 2px 12px #000;z-index:5}
+    .panel{position:absolute;background:linear-gradient(180deg,#061326cc,#020711aa);border:1px solid #55d9ff66;border-radius:14px;padding:12px 16px;backdrop-filter:blur(8px)}
+    #speed{left:18px;bottom:18px;font-size:18px;letter-spacing:.08em}
+    #speed b{font-size:42px;color:#fff}
+    #status{right:18px;top:18px;min-width:220px}
+    #help{left:50%;top:16px;transform:translateX(-50%);font-size:12px;opacity:.9}
+    #cross{position:absolute;left:50%;top:50%;width:18px;height:18px;transform:translate(-50%,-50%);border:1px solid #9ff;border-radius:50%;opacity:.35}
+    .bar{height:6px;background:#102236;border-radius:4px;overflow:hidden;margin-top:6px}
+    .fill{height:100%;background:linear-gradient(90deg,#00eaff,#7dff62,#ffe600);width:100%}
+  </style>
+</head>
+<body>
+<div id="hud">
+  <div id="help" class="panel">W/S accelerate · A/D steer · Shift nitro · Space fire · R reset</div>
+  <div id="status" class="panel">
+    <div>PRISMATIC VELOCITY</div>
+    <div id="lap">LAP 1 / 3</div>
+    <div id="weapon">WEAPON: PLASMA</div>
+    <div>SHIELD<div class="bar"><div id="shield" class="fill"></div></div></div>
+  </div>
+  <div id="speed" class="panel"><b id="kmh">0</b> KM/H<br><span id="boost">NITRO ×3</span></div>
+  <div id="cross"></div>
+</div>
+<script type="importmap">
+{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.186.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.186.0/examples/jsm/"}}
+</script>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>

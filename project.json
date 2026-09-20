@@ -1,0 +1,10 @@
+{
+  "project": "prismatic-velocity",
+  "renderer": "three.js",
+  "three_version": "0.186.0",
+  "seed_source": "seed.png",
+  "requested_integrations": {
+    "boa": "https://github.com/somsung46813-creator/boa-bigapi-framework.git",
+    "holocron": "https://github.com/somsung46813-creator/HOLOCRON-Abstraction-SDK.git"
+  }
+}
